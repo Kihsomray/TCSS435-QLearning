@@ -1,5 +1,7 @@
 // i used gpt to help me out with this
 // so i can understand it better
+//
+// Using the Bellman update with a learning rate and discount rate
 class QLearningAgent {
 
     env;
@@ -23,6 +25,7 @@ class QLearningAgent {
         for (let x = 0; x < env.size; x++) {
             for (let y = 0; y < env.size; y++) {
 
+                // Initialize q values to 0
                 this.qTable[`${x},${y}`] = {
                     'up': 0,
                     'down': 0,
@@ -115,7 +118,7 @@ class QLearningAgentEntity {
     gridWorld;
     size;
     position;
-    
+
 
     constructor(agent, gridWorld) {
 
